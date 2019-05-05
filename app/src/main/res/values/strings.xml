@@ -1,0 +1,69 @@
+<resources>
+
+    <string name="app_VersionName">1.2 beta</string>
+
+    <!-- test
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    -->
+    <!-- gbsouris@gmail.com-->
+    <string name="banner_ad_unit_id">ca-app-pub-2804665778271467/6158464233</string>
+
+    <string name="app_name">Trich\'Mots</string>
+    <string name="title_menu">Menu</string>
+    <string name="title_dico">Mode dictionnaire</string>
+    <string name="title_atrou">Mode à trou</string>
+    <string name="title_scrabble">Mode scrabble</string>
+    <string name="nombre_inital">Rien</string>
+    <string name="btStart">Chercher</string>
+    <string name="tvHint">Tous les caractères</string>
+    <string name="hintMessage">Saisir au moins autant de caractères que le nombre de lettres selectionnées.</string>
+    <string name="lettreIgnore">Les lettres seront ignorées…</string>
+    <string name="lettrePriseEnCompte">Prise en compte des lettres…</string>
+    <string name="recherche">Recherche…</string>
+    <string name="enCours">En cours…</string>
+    <string name="noNetwork">Pas de réseau…</string>
+    <string name="nbMots">Nombre de mots : </string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="raz">Raz</string>
+    <string name="lectureDico">Lecture du dictionnaire…</string>
+    <string name="erreur">Erreur…</string>
+    <string name="saisirCar">Saisir un caractère …</string>
+    <string name="clicMaPub">Content du résultat ? Un clic sur la pub…</string>
+
+
+
+
+    <string name="urlLarousse">http://www.larousse.fr/encyclopedie/rechercher?q=</string>
+    <string name="urlCnrtl">http://www.cnrtl.fr/definition/</string>
+
+
+    <string-array name="itemNbCar">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+    </string-array>
+
+</resources>
