@@ -7,6 +7,7 @@
     -->
     <!-- gbsouris@gmail.com-->
     <string name="banner_ad_unit_id">ca-app-pub-2804665778271467/6158464233</string>
+    <string name="adMob_APPLICATION_ID">ca-app-pub-2804665778271467~3204997838</string>
 
     <string name="app_name">Trich\'Mots</string>
     <string name="title_menu">Menu</string>
@@ -28,7 +29,7 @@
     <string name="raz">Raz</string>
     <string name="lectureDico">Lecture du dictionnaire…</string>
     <string name="erreur">Erreur…</string>
-    <string name="saisirCar">Saisir un caractère …</string>
+    <string name="saisirCar">Saisir le caractère…</string>
     <string name="clicMaPub">Content du résultat ? Un clic sur la pub…</string>
 
 

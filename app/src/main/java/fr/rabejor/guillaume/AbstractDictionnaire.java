@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 abstract class AbstractDictionnaire extends Activity implements IDictionnaire, View.OnClickListener {
 
@@ -150,11 +151,14 @@ abstract class AbstractDictionnaire extends Activity implements IDictionnaire, V
             }
         });
 
+        //MobileAds.initialize(this, R.string.banner_ad_unit_id);
+        MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
         adView = (AdView) findViewById(R.id.adView);
         //AdRequest adRequest = new AdRequest.Builder().build();
         adRequest = new AdRequest.Builder()
                 .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)        // All emulators
                 .addTestDevice("F2B693C7460CE7BA012C50D2F53543C5")  // My SonyXperiaU test phone
+                .addTestDevice("F85B1DE0959EAB250489C3DC7DC89B0A")  // My Samsung Galaxy S5 test phone
                 .build();
 
     }
@@ -171,7 +175,7 @@ abstract class AbstractDictionnaire extends Activity implements IDictionnaire, V
     }
 
     public void init() {
-        javaLstResult = new ArrayList<String>();
+        javaLstResult = new ArrayList<>();
     }
 
 }
