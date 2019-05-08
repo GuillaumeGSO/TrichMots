@@ -1,17 +1,10 @@
 package fr.rabejor.guillaume;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Locale;
-
-import org.apache.commons.lang.StringUtils;
-
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
-import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.view.Gravity;
@@ -27,6 +20,11 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
+import org.apache.commons.lang.StringUtils;
+
+import java.util.ArrayList;
+import java.util.Locale;
 
 public class ATrouActivity extends AbstractDictionnaire implements OnItemSelectedListener, OnCheckedChangeListener {
 
@@ -55,19 +53,19 @@ public class ATrouActivity extends AbstractDictionnaire implements OnItemSelecte
             tabString = savedInstanceState.getStringArray(TAB_CHAR);
             javaLstResult = savedInstanceState.getStringArrayList(LST_RESULT);
             if (javaLstResult.size() > 0) {
-                populateListeResult(new ArrayList<String>(javaLstResult));
+                populateListeResult(new ArrayList<>(javaLstResult));
             }
         }
     }
 
     public void init() {
         super.init();
-        content = (LinearLayout) findViewById(R.id.contenu);
+        content = findViewById(R.id.contenu);
 
-        spNbCar = (Spinner) findViewById(R.id.spNbCar);
+        spNbCar = findViewById(R.id.spNbCar);
         spNbCar.setOnItemSelectedListener(this);
 
-        toggleButton = (ToggleButton) findViewById(R.id.toggleButton1);
+        toggleButton = findViewById(R.id.toggleButton1);
         toggleButton.setOnCheckedChangeListener(this);
 
     }
@@ -85,7 +83,7 @@ public class ATrouActivity extends AbstractDictionnaire implements OnItemSelecte
         // Ouvrir dialog et entrer une lettre.
         final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
 
-        dialogBuilder.setTitle(getString(R.string.saisirCar));
+        dialogBuilder.setTitle(getString(R.string.saisirCar) + button.getHint());
 
         // Set an EditText view to get user input
         final EditText input = new EditText(this);
@@ -189,15 +187,21 @@ public class ATrouActivity extends AbstractDictionnaire implements OnItemSelecte
     private void createBoutons(String[] str) {
         if (str != null) {
             for (int i = 0; i < str.length; i++) {
-                Button bouton = new Button(ATrouActivity.this);
-                bouton.setHeight(40);
-                bouton.setWidth(40);
-                bouton.setId(i);
-                bouton.setText(str[i]);
-                bouton.setOnClickListener(this);
-                content.addView(bouton);
+                content.addView(generateButton(i, str[i]));
             }
         }
+    }
+
+    private Button generateButton(int i, String str) {
+        Button bouton = new Button(ATrouActivity.this);
+        bouton.setHeight(40);
+        bouton.setWidth(40);
+        bouton.setHint(String.valueOf(i+1));
+        bouton.setHintTextColor(Color.parseColor("#e1e1e1"));
+        bouton.setId(i);
+        bouton.setText(str);
+        bouton.setOnClickListener(this);
+        return bouton;
     }
 
     @Override
